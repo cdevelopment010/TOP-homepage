@@ -1,0 +1,76 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+
+main h2 {
+    text-align: center;
+}
+
+.my-work-container {
+    display: grid; 
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, 300px);
+}
+
+/*start of project card */
+.project-card {
+    display: grid; 
+    gap: 0.5rem;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 2fr 2rem auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+
+}
+
+.project-card img {
+    background: grey; 
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.project-head, .project-body {
+    padding: 1rem;
+}
+
+.project-head {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.project-head h5 {
+    font-size: 1.5rem;
+}
+
+.project-body {
+    padding-top: 0.25rem;
+}
+/*end of project card */
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    main {
+        width: 80vw; 
+        margin-inline: auto;
+    }
+
+    main h2 {
+        text-align: start;
+    }
+
+    .my-work-container { 
+        justify-content: flex-start;
+    }
+}
