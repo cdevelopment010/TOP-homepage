@@ -7,16 +7,21 @@
 
 
 
-main h2 {
-    text-align: center;
-}
-
 .my-work-container {
     display: grid; 
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, 300px);
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    grid-template-rows: min-content auto;
+}
+
+.my-work-container h2 {
+    font-size: 3rem;
+    grid-row: 1;
+    grid-column: 1/-1;
+    text-align: center;
+    margin-bottom: -2rem;
 }
 
 /*start of project card */
@@ -35,6 +40,17 @@ main h2 {
     aspect-ratio: 1/1;
     overflow: hidden;
     border-radius: 5px 5px 0 0;
+}
+
+.project-card:nth-child(n) img {
+    background-color: lightgreen;
+}
+.project-card:nth-child(2n) img {
+    background-color: lightcoral;
+}
+
+.project-card:nth-child(3n) img {
+    background-color: lightblue;
 }
 
 .project-head, .project-body {
@@ -66,11 +82,23 @@ main h2 {
         margin-inline: auto;
     }
 
-    main h2 {
-        text-align: start;
-    }
+    
 
     .my-work-container { 
         justify-content: flex-start;
+        grid-template-columns: repeat(2, minmax(250px,1fr));
+    }
+
+    .my-work-container h2 {
+        text-align: start;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    
+    .my-work-container {
+        grid-template-columns: repeat(3, minmax(300px,1fr));
     }
 }
