@@ -11,6 +11,56 @@ html {
 
 a {color: black}
 .d-none-sm {display: none;}
+
+/* HEADER & ABOUT */
+header {
+    height: 100%;
+    min-height: 300px; 
+    position: relative; 
+}
+header::after{
+    content:'';
+    z-index: -1; 
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 120%; 
+    width: 100%; 
+    background: #0891B2;
+    /* clip-path: polygon(0 0, 100%  0%, 100% 50%, 0 90%); */
+    box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+    transform: skewY(-10deg) translateY(-40%);
+}
+
+.header-image-container {
+    margin: 1rem;
+    position: relative;  
+    height: 300px; 
+    width: 300px; 
+    margin-inline: auto;
+}
+
+.header-image-container img {
+    position: relative;
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover;    
+}
+
+.header-name {
+    position: absolute;
+    bottom: 0; 
+    left: 10px; 
+    font-size: 3rem; 
+    color: white; 
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.25);
+}
+
+
+/* END OF HEADER & ABOUT */
+
+
+/* Projects */
 .my-work-container {
     display: grid; 
     align-items: center;
@@ -135,6 +185,17 @@ footer img {
 
     
     .d-none-sm {display: inline-block} 
+
+    .header-image-container {
+        margin: 1rem;
+        margin-left: 10vw;
+    }
+    .header-name {
+        width: 150%; 
+        top: 15px; 
+        left: 80%; 
+     }
+
     .my-work-container { 
         justify-content: flex-start;
         grid-template-columns: repeat(2, minmax(auto,1fr));
